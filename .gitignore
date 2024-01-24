@@ -1,2 +1,6 @@
-# Ignore compiled Python files
-.pyc
+# Python-related
+
+__pycache__/
+*.pyc
+*.pyo
+*.pydc
