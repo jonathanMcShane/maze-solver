@@ -23,15 +23,20 @@ class Window:
     def close(self):
         self.__window_is_running = False
 
-    def draw_line(self, line, fill_colour="black"):
+    def draw_line(self, line, fill_colour="white"):
         line.draw(self.__canvas, fill_colour)
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
 class Line:
     def __init__(self, point_a, point_b):
         self.__point_a = point_a
         self.__point_b = point_b
 
-    def draw(self, canvas, fill_colour):
+    def draw(self, canvas, fill_colour="black"):
         canvas.create_line(
             self.__point_a.x, 
             self.__point_a.y, 
@@ -41,8 +46,3 @@ class Line:
             width=2
         )
         canvas.pack()
-    
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
